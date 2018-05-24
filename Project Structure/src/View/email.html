@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/estilo.css">
+    <title>Email - </title>
+  </head>
+
+  <style media="screen">
+    .container-fluid {
+      margin-top: 50px;
+    }
+
+
+    #btnComporEmail {
+      width: 100%;
+    }
+
+    /* remover bullets da lista de opcoes de email */
+    ul {
+      list-style: none;
+    }
+
+
+    /* deixar os icons da tabela de cor amarela */
+    .table i.fa {
+      color: #ffc107 !important;
+    }
+
+    /* estilar tabs com bordas */
+    .interface .nav-item {
+      width: 253px;
+      border-top: 2px solid gray;
+      border-left: 1px solid #e4dbdb;
+      border-right: 1px solid #e4dbdb;
+
+    }
+
+    /* mudar o cursor  */
+    .interface .nav-item i.fa:hover {
+      cursor: pointer;
+    }
+
+    .email-opcoes a {
+      font-size: 0.9em;
+    }
+
+    .email-opcoes a:hover {
+      text-decoration: none;
+    }
+
+    .row {
+      margin-bottom: 10px;
+    }
+
+    .bold {
+      font-weight: bold;
+      font-size: 0.8em;
+    }
+
+    .pull-left button {
+      width: 75px;
+    }
+
+    .table tr, .table td {
+      padding: .25rem !important;
+    }
+    .table td {
+        font-size: 0.9em;
+    }
+
+    /* alterar posicao padrao do elemento modal que contem o formulario para envio de email*/
+    .modal {
+      position: fixed;
+      top:  0 !important;
+    }
+
+    .modal-dialog {
+        max-width: 600px;
+    }
+
+    .modal input {
+      width: 85%;
+      float: right;
+    }
+
+    .modal textarea {
+      width: 100%;
+    }
+
+    .modal-header {
+      height: 50px;
+    }
+
+
+  </style>
+  <body>
+    <nav class="navbar  navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a href="#" class="navbar-brand">SHPI</a>
+          <!-- <button type="button" class="nabar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-controls="nav-collapse" aria-label="Toggle navigation" aria-expanded="false" name="button">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <div class="collapse navbar-collapse " id="nav-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Home <span class="sr-only">(current)</span> <i class="fa fa-home"></i> </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="#" class="nav-link">Mural  <i class="fa fa-globe"></i> </a>
+              </li> -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">Mensagem <i class="fa fa-inbox"></i> </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Notificacao <i class="fa fa-bell "></i> </a>
+              </li>
+            </ul>
+
+            <form class="form-inline mt-2 mt-md-0" action="index.html" method="post">
+              <input class="form-control mr-sm-2 "type="text" name="procurar" placeholder="..." aria-label="procurar" value="">
+              <button  class="btn btn-outline-success" type="submit" name="button">Procurar</button>
+            </form>
+
+          </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="interface">
+
+
+
+      <div class="row">
+        <div class="offset-2 col-md-10 ">
+          <div class="pull-left">
+          <button type="button" class="btn" name="button"> <i class="fa fa-refresh"></i> </button>
+          <button type="button" class="btn" name="button"> mais <i class="fa fa-caret-down"></i> </button>
+        </div>
+          <div class="pull-right">
+            <span class="bold">1-50 de 3 045</span>
+          <button type="button" class="btn" name="button"> <i class="fa fa-arrow-left"></i> </button>
+          <button type="button" class="btn" name="button"> <i class="fa fa-arrow-right"></i> </button>
+
+          <button type="button" class="btn" name="button"> <i class="fa fa-wrench"></i> <i class="fa fa-caret-down"></i> </button>
+        </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="email-opcoes">
+            <li>
+              <button type="button" class="btn  btn-sm btn-danger" name="button" id="btnComporEmail">Compor</button>
+              <a data-target="#profile-modal" data-toggle="modal" class="dropdown-item btn btn-sm btn-danger">teste</a>
+            </li>
+            <li> <a href="#">Caixa de Entrada (12)</a> </li>
+            <li> <a href="#">Correio Enviado</a> </li>
+            <li> <a href="#">Rascunho (2)</a> </li>
+            <li> <a href="#">Spam</a> </li>
+            <li> <a href="#">Lixo</a> </li>
+
+          </ul>
+
+
+
+          </div>
+
+        <div class="col-md-10">
+          <!-- painel de navegacao de email -->
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a href="#principal" class="nav-link" data-toggle="tab"> <i class="fa fa-inbox"></i> Principal</a>
+            </li>
+          </ul>
+
+          <!-- conteudo de navegacao  -->
+          <div class="tab-content">
+            <div class="tab-pane active container" id="principal">
+              <div class="col-">
+
+                <table class="table table-stripped">
+
+                  <tbody>
+                    <tr>
+                      <td> <input type="checkbox" name="" value=""> </td>
+                      <td> <i class="fa fa-star-o"></i> </td>
+                      <td> <i class="fa fa-bookmark-o"></i> </td>
+                      <td> Dercio Guirruta </td>
+                      <td> Assunto - corpo mensagem </td>
+                      <td> 14/18 </td>
+
+                    </tr>
+                    <tr>
+                      <td> <input type="checkbox" name="" value=""> </td>
+                      <td> <i class="fa fa-star-o"></i> </td>
+                      <td> <i class="fa fa-bookmark-o"></i> </td>
+                      <td> joao carlos </td>
+                      <td> Assunto - corpo mensagem </td>
+                      <td> 14/18 </td>
+                    </tr>
+                    <tr>
+                      <td> <input type="checkbox" name="" value=""> </td>
+                      <td> <i class="fa fa-star"></i> </td>
+                      <td> <i class="fa fa-bookmark-o"></i> </td>
+                      <td> emprego.co.mz </td>
+                      <td> Assunto - corpo mensagem </td>
+                      <td> 14/18 </td>
+                    </tr>
+
+                    <tr>
+                      <td> <input type="checkbox" name="" value=""> </td>
+                      <td> <i class="fa fa-star-o"></i> </td>
+                      <td> <i class="fa fa-bookmark-o"></i> </td>
+                      <td> Lucia Armando </td>
+                      <td> Assunto - corpo mensagem </td>
+                      <td> 15/18 </td>
+                    </tr>
+                    <tr>
+                      <td> <input type="checkbox" name="" value=""> </td>
+                      <td> <i class="fa fa-star-o"></i> </td>
+                      <td> <i class="fa fa-bookmark"></i> </td>
+                      <td> Abdul Sumail </td>
+                      <td> Assunto - corpo mensagem </td>
+                      <td> 14/18 </td>
+                    </tr>
+                    <tr>
+                      <td> <input type="checkbox" name="" value=""> </td>
+                      <td> <i class="fa fa-star"></i> </td>
+                      <td> <i class="fa fa-bookmark text-warning"></i> </td>
+                      <td> google </td>
+                      <td> Assunto - corpo mensagem </td>
+                      <td> 14/18 </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="modal" id="profile-modal" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-dark">
+                <h5 class="modal-title" id="profile-modal-label">Mensagem</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <form class="" action="index.html" method="post">
+                  <div class="form-group">
+                    <label for="inputemailPara">Para</label>
+                    <input type="text" placeholder="" name="" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputemailPara">Assunto</label>
+                    <input type="text" placeholder="" name="" value="">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="name" rows="10"></textarea>
+                  </div>
+
+                  <div class="form-group email-toolbar">
+                      <button type="button" class="btn btn-sm">sans Serif <i class="fa fa-caret-up"></i> </button>
+                      <span class="vr-separator"></span>
+                      <button class="btn btn-sm"> tT<i class="fa fa-caret-up"></i> </button>
+                      <span class="vr-separator"></span>
+                      <button class="btn btn-sm"><i class="fa fa-bold"></i> </button>
+                      <button class="btn btn-sm"><i class="fa fa-italic"></i> </button>
+                      <button class="btn btn-sm"><i class="fa fa-underline"></i> </button>
+                      <button class="btn btn-sm"><i class="fa fa-adjust"></i> </button>
+                      <span class="vr-separator"></span>
+                      <button class="btn btn-sm"><i class="fa fa-align-left"></i> <i class="fa fa-caret-up"></i> </button>
+                      <button class="btn btn-sm"><i class="fa fa-list"></i> </button>
+                      <button class="btn btn-sm"><i class="fa fa-list-ol"></i></button>
+                      <button class="btn btn-sm"><i class="fa fa-indent"></i></button>
+                      <button class="btn btn-sm"><i class="fa fa-outdent"></i></button>
+                      <button class="btn btn-sm"><i class="fa fa-quote-right"></i></button>
+                      <span class="vr-separator"></span>
+                    </div>
+                    <div class="form-group email-toolbar">
+                      <button type="submit" class="btn btn-primary" name="button">Enviar</button>
+                      <button type="button" class="btn" name="button"> <i class="fa fa-paperclip"></i> </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+  </body>
+</html>

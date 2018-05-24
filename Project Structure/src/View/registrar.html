@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-pt">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/estilo.css">
+
+    <title>Registrar</title>
+  </head>
+
+  <style media="screen">
+    .form-registo {
+      background-color: white;
+    }
+  </style>
+  <body>
+    <nav class="navbar  navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a href="#" class="navbar-brand">SHPI</a>
+          <!-- <button type="button" class="nabar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-controls="nav-collapse" aria-label="Toggle navigation" aria-expanded="false" name="button">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <div class="collapse navbar-collapse " id="nav-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Home <span class="sr-only">(current)</span> <i class="fa fa-home"></i> </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="#" class="nav-link">Mural  <i class="fa fa-globe"></i> </a>
+              </li> -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">Mensagem <i class="fa fa-inbox"></i> </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Notificacao <i class="fa fa-bell "></i> </a>
+              </li>
+            </ul>
+
+            <form class="form-inline mt-2 mt-md-0" action="index.html" method="post">
+              <input class="form-control mr-sm-2 "type="text" name="procurar" placeholder="..." aria-label="procurar" value="">
+              <button  class="btn btn-outline-success" type="submit" name="button">Procurar</button>
+            </form>
+
+          </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <form class="form-registo col-md-9" action="index.html" method="post">
+
+          <div class="row">
+            <!-- input apelido  -->
+            <div class="col-md-5">
+              <label for="inputApelido">Apelido</label>
+              <input type="text" class="form-control" id="inputApelido" placeholder="" value="" required>
+            </div>
+            <!-- input nome  -->
+            <div class="col-md-7">
+              <label for="inputNome">Nome</label>
+              <input type="text" class="form-control" id="inputNome" placeholder="" value="" required>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <!-- input email -->
+            <div class="col-md-6">
+              <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="" value="" required>
+            </div>
+          </div>
+
+            <!-- input Departamento  -->
+            <div class="col-md-4">
+              <div class="form-group">
+              <label for="inputDepartamento">Departamento</label>
+              <select class="form-control" name="inputDepartamento">
+                <option value="selecionar" disabled>Selecione</option>
+                <option value="informatica">Informatica</option>
+
+              </select>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+
+            <!-- input tipo de documento  -->
+            <div class="col-md-3">
+              <div class="form-group">
+              <label for="inputDepartamento">Documento</label>
+              <select class="form-control" name="inputTipoDocumento">
+                <option value="BI" >BI</option>
+                <option value="carta conducao">Carta Conducao</option>
+              </select>
+            </div>
+          </div>
+          <!-- input numero do documento  -->
+            <div class="col-md-3">
+              <div class="form-group">
+              <label for="inputNuit">Numero</label>
+              <input type="text" class="form-control" id="inputDocumentoNum" placeholder="" value="" required>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+
+          <!-- input Nuit -->
+          <div class="col-md-3">
+            <div class="form-group">
+            <label for="inputNuit">Nuit</label>
+            <input type="text" class="form-control" id="inputNuit" placeholder="32182471042" value="" required>
+
+          </div>
+        </div>
+
+        </div>
+          <div class="row">
+
+            <!-- input sexo  -->
+            <div class="radio col-md-12">
+              <label class="">
+                <input type="radio" id="inputMasculino" name="inputSexo" value="Masculino" selected>  Masculino
+              </label>
+            </div>
+            <div class="radio col-md-12">
+              <label>
+                <input type="radio" id="inputFemino" name="inputSexo" value="Feminino"> Feminino
+
+              </label>
+            </div>
+
+          </div>
+
+
+
+          <!-- comando para submeter ou cancelar o registo -->
+          <div class="row">
+            <div class="form-group offset-4 col-md-4">
+              <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="btn btn-block btn-danger" type="submit" name="cancelar" value="Cancelar" >
+                </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <input class="btn btn-block btn-primary" type="submit" name="registrar" value="Registrar" >
+              </div>
+          </div>
+            </div>
+          </div>
+        </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+  </body>
+</html>
